@@ -1,29 +1,83 @@
-#results {
-    display:none;
-  }
-  /* 1. Font change */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif; /* Modern, clean font */
-    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1c1b3b;
+    margin: 0;
+    padding: 0;
 }
 
-/* 2. Color update */
-h1, .input-group-addon {
-    color: #ff6347; /* Soft coral for a vibrant look */
+/* Background Image */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('nyc.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
 }
 
-/* 3. Form element styling */
-.form-control {
-    border-radius: 5px;
-    padding: 10px;
+/* Logo Styling */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
-/* 4. Card shadow */
-.card {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.logo img {
+    width: 150px;
 }
 
-/* 5. Spacing */
-.form-group {
+/* Timer Container */
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    text-align: center;
+}
+
+.timer-display {
+    background-color: rgba(28, 27, 59, 0.7); /* Semi-transparent purple */
+    padding: 20px 40px;
+    font-size: 3rem;
+    color: #FFA500; /* Orange text */
+    border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    background-color: #800080; /* Purple button background */
+    color: #FFFFFF; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startTimer {
+    background-color: #FFA500; /* Orange button */
+}
+
+#resetTimer {
+    background-color: #FFFFFF; /* White button */
+    color: #800080; /* Purple text */
 }
